@@ -5,10 +5,6 @@ import ProfileHeader from '../components/ProfileHeader';
 import ProfileMenu from '../components/ProfileMenu';
 import EditProfile from '../components/EditProfile';
 
-const delay = ms => new Promise(
-    resolve => setTimeout(resolve, ms)
-  );
-
 
 export default function Profile() {
 

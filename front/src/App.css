@@ -380,13 +380,13 @@ section {
 
   background-color: white;
   z-index: 999999999;
-  height: 500px;
+  height: 580px;
   width: 50%;
   margin: auto;
   border: 2px dashed rgb(84 105 212 / 0.5);
   -webkit-box-shadow: 0 0 20px lightgray;
   box-shadow: 0 0 20px lightgray;
-  position: absolute;
+  position: fixed;
   top: 15%;
   left: 25%;
   animation: animateMounting .8s;
@@ -395,7 +395,8 @@ section {
 
 #editprofileheader {
 
-  color: #5a47ff
+  color: #5a47ff;
+  margin-bottom: 3%;
 
 }
 
@@ -407,37 +408,196 @@ section {
   top: 1%;
   right: 1%;
   font-size: 22px;
+  color: #5a47ff;
 
 }
 
-.label {
+#x:hover {
 
+  color: rgb(84 105 212 / 0.5);
+  transition: all .3s ease-in-out;
 
 }
 
-#editForm > input[type=text], #editForm > input[type=password], #editForm > input[type=submit] {
+#inputitem {
 
+  margin-bottom: 2%;
+
+}
+
+#inputitem > .label {
+
+  display: inline-block;
+  text-align: left;
+  font-size: 12px;
+  font-weight: bold;
+  padding-right: 10px;
+  color: rgb(84 105 212 / 0.5);
+  width: 10%;
+
+}
+
+#inputitem > input[type=text], #inputitem > input[type=email], #inputitem > input[type=cell]{
+
+  display: inline-block;
   width: 50%;
   height: 50px;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   border-radius: 5px;
   border: 1px solid lightgray;
-
-}
-#editForm > .label {
-
-  margin-right: 80%;
-  text-align: left;
-  font-size: 12px;
+  padding: 10px;
+  color: rgb(84 105 212 / 0.5);
   font-weight: bold;
 
 }
-#editForm > input[type=submit] {
 
-  background-color: #5a47ff;
+#inputitem>input[type=text]::placeholder, #inputitem > input[type=email]::placeholder, #inputitem > input[type=cell]::placeholder {
+
+  color: gray;
+  font-weight: 100;
+
+}
+
+#editinner {
+
+  margin-top: 10%;
+
+}
+
+#sectionname {
+
+  display: inline-block;
+  font-size: 20px;
+  color: rgb(84 105 212 / 0.5);
+  font-weight: bolder;
+  margin-bottom: 3%;
+
+}
+
+#generalinformation {
+
+  animation: animateMounting 1.2s;
+  height: 360px;
+  overflow: hidden;
+
+}
+
+#bioinformation {
+
+  animation: animateMounting 1.2s;
+  height: 360px;
+
+}
+
+.changers {
+
+  margin: 0% 2%;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 1px solid rgb(84 105 212 / 0.5);
+  background: transparent;
+
+}
+
+#genericsection {
+
+  position: absolute;
+  left: 44%;
+  bottom: 11%;
+  background-color: transparent;
+  animation: animateMounting 1.2s;
+  display: default;
+
+}
+
+#biosection {
+
+  position: absolute;
+  right: 44%;
+  bottom: 11%;
+  background-color: transparent;
+  animation: animateMounting 1.2s;
+
+}
+
+#genericsectionactive {
+
+  position: absolute;
+  left: 44%;
+  bottom: 11%;
+  background-color: rgb(84 105 212 / 0.5);
+  animation: animateMounting 1.2s;
+  border: none;
+
+}
+
+#biosectionactive {
+
+  display: inline-block;
+  position: absolute;
+  right: 44%;
+  bottom: 11%;
+  background-color: rgb(84 105 212 / 0.5);
+  animation: animateMounting 1.2s;
+  border: none;
+
+}
+
+#editButton {
+
+  background-color: rgb(85 87 212 / 0.5);
   border: transparent;
   border-radius: 3px;
   color: white;
+  width: 150px;
+  height: 30px;
+  margin-top: 5%;
+  margin-left: 0.5%;
+  position: absolute;
+  bottom: 5%;
+  right: 36%;
+
+}
+
+#editButton:hover {
+
+  background-color: #5a47ff;
+  transition: all 0.5s ease;
+
+}
+
+#editCancel {
+
+  background-color: gray;
+  border: transparent;
+  border-radius: 3px;
+  color: white;
+  width: 50px;
+  height: 30px;
+  margin-right: 0.5%;
+  position: absolute;
+  bottom: 5%;
+  left: 36%;
+
+}
+
+#editCancel:hover {
+
+  background-color: lightgray;
+  transition: all 0.5s ease;
+
+}
+
+#response {
+
+  display: inline-block;
+  position: absolute;
+  bottom: 0%;
+  margin-right: 100%;
+  margin-left: -20%;
+  color: #5a47ff;
+  width: 300px;
 
 }

@@ -10,18 +10,18 @@ pool:
 stages:
 - stage: firstprint
   jobs:
-  - job: testing first
+  - job: testing_first
     steps:
     - script: echo hello first
       displayName: first
-  - job: testing second
+  - job: testing_second
     steps:
     - script: echo hello second
       displayName: second
 
 - stage: secondprint
   jobs:
-    - job: testing third
+    - job: testing_third
       steps:
       - script: echo Hello, world!
         displayName: 'Run a one-line script'

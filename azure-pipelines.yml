@@ -8,9 +8,9 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 stages:
-- stage: firstprint
+- stage: backend
   jobs:
-  - job: testing_first
+  - job: 
     steps:
     - script: echo hello first
       displayName: first
@@ -18,10 +18,3 @@ stages:
     steps:
     - script: echo hello second
       displayName: second
-
-- stage: secondprint
-  jobs:
-    - job: testing_third
-      steps:
-      - script: echo Hello, world!
-        displayName: 'Run a one-line script'

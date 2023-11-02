@@ -21,13 +21,16 @@ steps:
     npm run build
   displayName: 'npm install and build'
 
-- task: CopyFiles@2
+- task: ArchiveFiles@2
   inputs:
-    Contents: '**'
-    TargetFolder: '$(build.artifactstagingdirectory)'
+    rootFolderOrFile: 'front/build'
+    includeRootFolder: true
+    archiveType: 'zip'
+    archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+    replaceExistingArchive: true
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)/front/build'
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)/**/*.zip'
     ArtifactName: 'reactApp'
     publishLocation: 'Container'
 

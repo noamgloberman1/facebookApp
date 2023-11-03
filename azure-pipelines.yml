@@ -9,10 +9,6 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
-variables:
-  uiSource: front/src
-  uiBuild: front/build
-
 steps:
 - task: NodeTool@0
   inputs:
@@ -20,19 +16,13 @@ steps:
   displayName: 'Install Node.js'
 
 - script: |
-    pushd $(uiSource)
+    cd front
     npm install
     npm run build
   displayName: 'npm install and build'
-- task: ArchiveFiles@2
-  inputs:
-    rootFolderOrFile: '$(uiBuild)'
-    archiveType: 'zip'
-    archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
-    replaceExistingArchive: true
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
-    ArtifactName: 'reactApp'
+    PathtoPublish: 'front/build'
+    ArtifactName: 'drop'
     publishLocation: 'Container'
 

@@ -10,8 +10,8 @@ pool:
   vmImage: ubuntu-latest
 
 variables:
-  uiSource: front
-  uiBuild: $(uiSource)/build
+  uiSource: front/src
+  uiBuild: front/build
 
 steps:
 - task: NodeTool@0
